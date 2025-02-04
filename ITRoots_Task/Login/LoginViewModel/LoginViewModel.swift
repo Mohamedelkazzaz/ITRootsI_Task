@@ -50,5 +50,10 @@ class LoginViewModel {
     // MARK: - Toggle Language
     func toggleLanguage() {
         isRTL.toggle()
+        let currentLanguage = UserDefaults.standard.string(forKey: "appLanguage") == "en" ? "ar" : "en"
+        UserDefaults.standard.set(currentLanguage, forKey: "appLanguage")
+        UserDefaults.standard.synchronize()
+        
+        NotificationCenter.default.post(name: NSNotification.Name("LanguageChanged"), object: nil)
     }
 }

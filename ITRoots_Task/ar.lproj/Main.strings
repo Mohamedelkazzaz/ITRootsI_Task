@@ -1,0 +1,51 @@
+
+/* Class = "UILabel"; text = "ITRoots"; ObjectID = "2Ho-Jt-A3v"; */
+"2Ho-Jt-A3v.text" = "ITRoots";
+
+/* Class = "UIButton"; configuration.title = "change Language"; ObjectID = "2VF-1h-EYx"; */
+"2VF-1h-EYx.configuration.title" = "تغيير اللغة";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2VF-1h-EYx"; */
+"2VF-1h-EYx.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "3Ix-Hc-mOf"; */
+"3Ix-Hc-mOf.placeholder" = "الهاتف";
+
+/* Class = "UILabel"; text = "ITRoots"; ObjectID = "8TC-Un-cLr"; */
+"8TC-Un-cLr.text" = "ITRoots";
+
+/* Class = "UIButton"; configuration.title = "Register"; ObjectID = "EjK-2c-ifA"; */
+"EjK-2c-ifA.configuration.title" = "تسجيل";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "EjK-2c-ifA"; */
+"EjK-2c-ifA.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "daQ-C7-LPI"; */
+"daQ-C7-LPI.placeholder" = "الاسم كامل";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "gg9-kO-KSw"; */
+"gg9-kO-KSw.placeholder" = "الاسم";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "hMg-XF-cEf"; */
+"hMg-XF-cEf.placeholder" = "كلمة المرور";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "l3E-uA-QiL"; */
+"l3E-uA-QiL.placeholder" = "الاسم";
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "mcr-PU-v47"; */
+"mcr-PU-v47.configuration.title" = "تسجيل الدخول";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mcr-PU-v47"; */
+"mcr-PU-v47.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Register"; ObjectID = "rrD-vM-1GS"; */
+"rrD-vM-1GS.configuration.title" = "تسجيل";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rrD-vM-1GS"; */
+"rrD-vM-1GS.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "tvb-E6-WsQ"; */
+"tvb-E6-WsQ.placeholder" = "كلمة المرور";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "vQM-dA-C4d"; */
+"vQM-dA-C4d.placeholder" = "البريد الالكتروني";

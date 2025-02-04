@@ -28,19 +28,20 @@ class MainViewViewController: UIViewController {
         let mapStoryBoard = UIStoryboard(name: "Main", bundle: nil)
         let mapVC = mapStoryBoard.instantiateViewController(withIdentifier: "MapViewController")
         
-        // Tab 1: Horizontal and Vertical Scrolling
+        let apiStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        let apiVC = apiStoryBoard.instantiateViewController(withIdentifier: "APIViewController")
+        
+
         scrollVC.tabBarItem = UITabBarItem(title: "Scroll", image: nil, tag: 0)
-        
-        // Tab 2: Map with Current Location
         mapVC.tabBarItem = UITabBarItem(title: "Map", image: nil, tag: 1)
+        apiVC.tabBarItem = UITabBarItem(title: "API Data", image: nil, tag: 2)
         
-        // Tab 3: Online API Data with Offline Support
-        let tab3 = UIViewController()
-        tab3.tabBarItem = UITabBarItem(title: "API Data", image: nil, tag: 2)
-        
-        tabBarController.viewControllers = [scrollVC, mapVC, tab3]
+        tabBarController.viewControllers = [scrollVC, mapVC, apiVC]
         addChild(tabBarController)
         view.addSubview(tabBarController.view)
         tabBarController.didMove(toParent: self)
     }
+    
+    
+    
 }

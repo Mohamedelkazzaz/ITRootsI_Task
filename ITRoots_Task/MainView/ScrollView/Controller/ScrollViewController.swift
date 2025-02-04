@@ -25,6 +25,11 @@ class ScrollViewController: UIViewController {
         tableView.register(UINib(nibName: "ScrollTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
     
+    @IBAction func settingsButtonPressed(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension ScrollViewController: UICollectionViewDelegate, UICollectionViewDataSource {

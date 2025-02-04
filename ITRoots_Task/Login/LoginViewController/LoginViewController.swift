@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
         
         pickerView.delegate = self
         pickerView.dataSource = self
+        
         checkIfUserLoggedIn()
     }
     
@@ -46,8 +47,10 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func changeLanguageButtonPressed(_ sender: Any) {
-        viewModel.toggleLanguage()
-        updateUILayout()
+//        viewModel.toggleLanguage()
+//        updateUILayout()
+        let newLanguage = (LanguageManager.shared.currentLanguage == "en") ? "ar" : "en"
+        LanguageManager.shared.setLanguage(newLanguage)
     }
     
     private func updateUILayout() {

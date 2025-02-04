@@ -25,5 +25,11 @@
 	<string> We need your location to show it on the map.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>We need your location to show it on the map even when the app is in the background.</string>
+    
+    <key>AppleLanguages</key>
+    <array>
+        <string>en</string>
+        <string>ar</string>
+    </array>
 </dict>
 </plist>
