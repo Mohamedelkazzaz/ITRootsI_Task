@@ -24,16 +24,21 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         guard let username = userNameTextField.text, let password = passwordTextField.text else { return }
-             
-             viewModel.login(username: username, password: password) { success in
-                 if success {
-                     UserDefaults.standard.set(true, forKey: "isLoggedIn")
-                     let vc = storyboard?.instantiateViewController(withIdentifier: "MainViewViewController") as! MainViewViewController
-                     self.navigationController?.pushViewController(vc, animated: true)
-                 } else {
-                     print("Invalid credentials")
-                 }
-             }
+            
+            viewModel.login(username: username, password: password) { success, user in
+                if success, let loggedInUser = user {
+                    // Save login state and user data
+                    UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                    self.viewModel.saveLoggedInUser(loggedInUser)
+                    
+                    // Navigate to Main View
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainViewViewController") as! MainViewViewController
+                    vc.loggedInUser = loggedInUser
+                    self.navigationController?.pushViewController(vc, animated: true)
+                } else {
+                    print("Invalid credentials")
+                }
+            }
     }
     
     @IBAction func registerButtonPressed(_ sender: Any) {
@@ -50,12 +55,16 @@ class LoginViewController: UIViewController {
     }
     
     private func checkIfUserLoggedIn() {
-           let isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
-           if isLoggedIn {
-               print("User already logged in, navigate to MainView")
-           }
-       }
-}
+         let isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
+         if isLoggedIn, let loggedInUser = viewModel.getLoggedInUser() {
+             
+             let vc = storyboard?.instantiateViewController(withIdentifier: "MainViewViewController") as! MainViewViewController
+             vc.loggedInUser = loggedInUser
+             self.navigationController?.pushViewController(vc, animated: true)
+         }
+     }
+ }
+
 
 extension LoginViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
